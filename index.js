@@ -53,8 +53,6 @@ app.post("/api/refresh", (req, res) => {
         });
 
     });
-
-
 });
 
 const generateAccessToken = (user) => {
@@ -63,7 +61,7 @@ const generateAccessToken = (user) => {
         isAdmin: user.isAdmin,
     },
         "mySecretKey",
-        { expiresIn: "15m" }
+        { expiresIn: "5s" }
     );
 }
 const generateRefreshToken = (user) => {
